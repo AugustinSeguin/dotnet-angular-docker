@@ -1,3 +1,4 @@
+# Visual Studio Code
 .vscode/
 .vs/
 
@@ -16,3 +17,36 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.generated.cs
+*.designer.cs
+*.g.cs
+*.g.i.cs
+
+# Docker
+docker-compose.override.yml
+**/Dockerfile
+**/docker-compose*.yml
+
+# Secrets
+secrets.json
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Dependency directories
+Angular/mon-app-angular/node_modules/
+packages/
+
+DotnetDockerAPI/obj 
+DotnetDockerAPI/bin
+DotnetDockerAPI/Properties/launchSettings.json
