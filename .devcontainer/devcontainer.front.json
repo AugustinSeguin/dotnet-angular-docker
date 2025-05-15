@@ -1,0 +1,25 @@
+{
+  "name": "Angular Frontend DevContainer",
+  "dockerComposeFile": "./compose.yaml",
+  "service": "front",
+  "workspaceFolder": "/workspace/front",
+  "shutdownAction": "stopCompose",
+  "extensions": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.vscode-typescript-next",
+    "angular.ng-template",
+    "SonarSource.sonarlint-vscode"
+  ],
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "editor.formatOnSave": true,
+    "files.exclude": {
+      "**/node_modules": true
+    }
+  },
+  "postCreateCommand": "npm install && npm test",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+  ]
+}

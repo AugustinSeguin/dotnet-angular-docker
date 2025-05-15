@@ -1,32 +1,24 @@
 {
-  "name": "Dotnet + Angular DevContainer",
+  "name": "Dotnet API DevContainer",
   "dockerComposeFile": "./compose.yaml",
   "service": "api",
-  "workspaceFolder": "/workspace",
+  "workspaceFolder": "/workspace/api",
   "shutdownAction": "stopCompose",
   "extensions": [
     "ms-dotnettools.csharp",
     "ms-azuretools.vscode-docker",
-    "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint",
-    "ms-vscode.vscode-typescript-next",
-    "angular.ng-template",
-    "mtxr.sqltools"
+    "SonarSource.sonarlint-vscode"
   ],
-
   "settings": {
     "terminal.integrated.defaultProfile.linux": "bash",
     "editor.formatOnSave": true,
     "files.exclude": {
       "**/bin": true,
-      "**/obj": true,
-      "**/node_modules": true
+      "**/obj": true
     }
   },
-
-  "postCreateCommand": "dotnet restore && npm install --prefix Angular/mon-app-angular",
-
+  "postCreateCommand": "dotnet restore DotnetDockerAPI/DotnetDockerAPI.csproj && dotnet test",
   "mounts": [
-    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    "source=${localWorkspaceFolder},target=/workspace/api,type=bind,consistency=cached"
   ]
 }
