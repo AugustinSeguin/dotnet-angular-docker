@@ -24,6 +24,16 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  front:
+    build:
+      context: ./Angular
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "4200:8080"  
+    depends_on:
+      - api
+
 volumes:
   postgres_data:
     driver: local

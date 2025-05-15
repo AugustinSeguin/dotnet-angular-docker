@@ -20,17 +20,7 @@ docker-compose up --build -d
 docker-compose down -v
 ```
 
-## App Angular
+[App back accessible](http://localhost:5000/swagger/index.html)
+ 
+[App front accessible ici](http://localhost:4200/browser/)
 
-### Build app
-
-```bash
-docker build -t mon-app-angular .
-```
-
-
-### Run app
-
-```bash
-docker run -d --name mon-app-angular mon-app-angular
-```
