@@ -21,7 +21,7 @@ Entrer les valeurs des variables
 ### Lancer les services
 
 ```bash
-docker-compose up --build -d
+docker-compose up -d
 ```
 
 ### Down les services

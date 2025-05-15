@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  api:
+    image: mcr.microsoft.com/dotnet/sdk:9.0
+    container_name: devcontainer-api
+    init: true
+    volumes:
+      - ../DotnetDockerAPI:/workspace/api:cached
+    working_dir: /workspace/api
+    command: sleep infinity
+    ports:
+      - "5000:5000"
+    environment:
+      - DOTNET_CLI_TELEMETRY_OPTOUT=1
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  front:
+    image: node:20-alpine
+    container_name: devcontainer-angular
+    init: true
+    volumes:
+      - ../Angular/mon-app-angular:/workspace/front:cached
+    working_dir: /workspace/front
+    command: sleep infinity
+    ports:
+      - "4200:4200"
+    environment:
+      - CHOKIDAR_USEPOLLING=true

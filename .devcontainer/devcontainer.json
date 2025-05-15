@@ -1,6 +1,6 @@
 {
   "name": "Dotnet + Angular DevContainer",
-  "dockerComposeFile": "../compose.yaml",
+  "dockerComposeFile": "./compose.yaml",
   "service": "api",
   "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
