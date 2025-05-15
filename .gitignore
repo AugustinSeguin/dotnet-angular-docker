@@ -50,3 +50,5 @@ packages/
 DotnetDockerAPI/obj 
 DotnetDockerAPI/bin
 DotnetDockerAPI/Properties/launchSettings.json
+
+.env

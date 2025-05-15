@@ -1,12 +1,22 @@
 # Lancer le projet avec Docker
 
-## API en dotnet
+## Prérequis
 
 Assurez-vous d’avoir Docker et Docker Compose installés.
 
 Les services : 
 - une web API en .NET 8.0
 - une BDD Postgresql
+- app angular
+
+### Variables d'environnements
+
+```bash
+cp .env.example .env
+```
+
+Entrer les valeurs des variables
+
 
 ### Lancer les services
 
